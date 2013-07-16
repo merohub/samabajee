@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHP: Home</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+	<link rel="stylesheet" href="jquery.mobile.min.css" />
+	<link rel="stylesheet" href="custom.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<script type="text/javascript">
+function check(){
+
+	var num = document.getElementById('numb').value;
+	//document.write(!isNaN(num) + "<br />");
+
+	if( num == "" || isNaN( num ))
+   {
+     alert( "Please provide a zip in the format #####." );
+     document.frm.dec.focus() ;
+     return false;
+   }
+
+   else
+   	alert("good job");
+   return false;
+	//document.write("Value " + num);
+	//if(isNumeric(num))
+	//{
+		//alert('empty or is not a number');
+		//document.write("Empty <br/>");
+		//return false;
+	//}
+
+}
+
+
+</script>
+</head>
+<body>
+
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>Page Title</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">
+		<p><p style="margin-top:0;text-align:center;"><img src="logo.png" alt="Photo Run"></p>
+
+		<p style="color:#ff5114;"><strong>Integrated Health Partners is the UK's first Managed Care Organisation</strong></p>
+<!-- I removed ui-body so that its not too far from borders-->
+	
+
+
+
+<form name="frm">
+    
+     <label for="tel-2">Tel: data-clear-btn="true"</label>
+     <input type="tel" data-clear-btn="true" name="dec" id="numb">
+     <input type="submit" value="gogo" onclick="return check()" />
+</form>
+</p>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+		
+
+</body>
+</html>
